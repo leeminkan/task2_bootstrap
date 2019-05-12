@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 head1">
+            <p>16520950 - Nguyen Hoang Phuc</p>
+          </div>
+          <div class="d-none d-lg-block col-lg-2 head2 remove-padding">
+            <input type="text" placeholder="Search...">
+          </div>
+          <div class="d-none d-sm-block col-sm-6 col-md-6 col-lg-4 head3 remove-padding">
+            <ul>
+		        <li class="tablinks Cau1" onclick="openCity(event, 'Cau1')">Câu 1</li>
+		        <li class="tablinks Cau2" onclick="openCity(event, 'Cau2')">Câu 2</li>
+            <li class="tablinks Cau3" onclick="openCity(event, 'Cau3')">Câu 3</li>
+            <li class="tablinks Cau4" onclick="openCity(event, 'Cau4')">Câu 4</li>
+		    </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 tab">
+            <button class="tablinks Cau1" onclick="openCity(event, 'Cau1')">Câu 1</button>
+            <button class="tablinks Cau2" onclick="openCity(event, 'Cau2')">Câu 2</button>
+            <button class="tablinks Cau3" onclick="openCity(event, 'Cau3')">Câu 3</button>
+            <button class="tablinks Cau4" onclick="openCity(event, 'Cau4')">Câu 4</button>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 main2">
+              <div id="Cau1" class="tabcontent">
+                <h3>Câu 1: Trình bày các cách để tích hợp Bootstrap vào một trang HTML/CSS bình thường trong
+điều kiện đang có kết nối Internet? Trong Bootstrap đã được biên dịch gồm có những gì?</h3>
+                <p>Khi có kết nối Internet, ta sử dụng bootstrap bằng cách dùng các link từ CDN (Content Delivery Network) - một hệ thống các server được đặt rải rác ở nhiều nơi, lưu trữ và cung cấp dữ liệu cho người dùng.</p>
+                <div class="code">
+                  <pre>
+  <code class="language-html" data-lang="html">
+    <span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  </code>
+                  </pre>
+                </div>
+                
+                <p>Một cách khác để ta sử dụng Bootstrap chính là Download Bootstrap đã biên dịch từ <a href="#">getbootstrap.com</a>. Dưới đây là cấu trúc của Bootstrap đã biên dịch:</p>
+                <div class="code">
+                  <pre><code class="language-bash" data-lang="bash">bootstrap/
+    ├── css/
+    │   ├── bootstrap.css
+    │   ├── bootstrap.min.css
+    │   ├── bootstrap-theme.css
+    │   └── bootstrap-theme.min.css
+    ├── js/
+    │   ├── bootstrap.js
+    │   └── bootstrap.min.js
+    └── fonts/
+        ├── glyphicons-halflings-regular.eot
+        ├── glyphicons-halflings-regular.svg
+        ├── glyphicons-halflings-regular.ttf
+        └── glyphicons-halflings-regular.woff
+                </code></pre>
+                </div>
+                <p>Note: nên sử dụng cách một vì theo như các diễn đàn chia sẻ thì nó có sẵn các cơ chế cache trên máy như thế sẽ không mất thời gian tải lại file nữa mà dùng luôn, còn không thì mỗi lần vào site mình lại phải tải bootstrap về sẽ mất time load trang.</p>
+
+              </div>
+
+              <div id="Cau2" class="tabcontent">
+                <h3>Câu 2: Responsive là gì? Làm thế nào nếu muốn vô hiệu hóa tính năng Responsive khi đang sử
+dụng Bootstrap?</h3>
+                <p>Responsive dịch theo nghĩa Anh - Việt là đáp ứng. Còn ý nghĩa của Responsive đối với Web developer chính là phong cách thiết kế website để phù hợp với tất cả thiết bị với những màn hình có độ phân giải khác nhau. Để khi trang web được hiển thị lên, nó sẽ luôn có một bố cục thích hợp, người dùng dễ sử dụng.</p>
+                <p>Các bước để vô hiệu hóa tính năng responsive:
+                </p>
+                <ul>
+                  <li>
+                    Hãy bỏ thẻ <span>&lt;meta&gt;</span> viewport đã được đề cập đến trong <a href="http://getbootstrap.com.vn/css/#overview-mobile">tài liệu CSS</a>
+                  </li>
+                  <li>
+                    Hãy ghi đè thuộc tính width trên .container đối với mỗi cột trong hệ thống lưới, ví dụ <span>witdh: 970px !important;</span>
+                  </li>
+                  <li>
+                    Nếu bạn sử dụng thanh điều hướng, hãy vô hiệu hóa toàn bộ các tính năng thu gọn và mở rộng trên thanh điều hướng đó.
+                  </li>
+                  <li>
+                    Đối với các bố cục dạng lưới, hãy sử dụng class <span>.col-xs-*</span> bằng cách thêm vào hoặc thay thế cho các class medium/large. Bởi vì hệ thống lưới trên các thiết bị có màn hình siêu nhỏ sẽ tự động co giãn đối với mọi độ phân giải.
+                  </li>
+                </ul>
+              </div>
+
+              <div id="Cau3" class="tabcontent">
+                <h3>Câu 3: Tìm hiểu về hệ thống lưới (Grid System) của Bootstrap và so sánh hoạt động của hệ thống
+lưới này trên các thiết bị có kích thước màn hình khác nhau như Phones (<768px), Tablet
+( ≥768px), Desktop( ≥992px và ≥1200px).</h3>
+                <p>Grid System là một hệ thống lưới và là một thuật ngữ được dùng trong thiết kế và nó được cấu hình thành 12 cột. Kích thước trong Grid System tính bằng cột, mỗi cột này sẽ chiếm một % nhất định kích thước của layout. Thay vì chỉ định rõ ràng kích thước là 200px, 300px,… Thì giờ chúng ta sẽ dùng đơn vị là cột. Mà % là bao nhiêu thì bootstrap đã tính sẵn rồi.</p>
+                <p>Grid system trong bootstrap được thể hiện bằng các class.</p>
+                <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            Extra small devices
+            <small>Phones (&lt;768px)</small>
+          </th>
+          <th>
+            Small devices
+            <small>Tablets (≥768px)</small>
+          </th>
+          <th>
+            Medium devices
+            <small>Desktops (≥992px)</small>
+          </th>
+          <th>
+            Large devices
+            <small>Desktops (≥1200px)</small>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Grid behavior</th>
+          <td>Horizontal at all times</td>
+          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+        </tr>
+        <tr>
+          <th>Container width</th>
+          <td>None (auto)</td>
+          <td>750px</td>
+          <td>970px</td>
+          <td>1170px</td>
+        </tr>
+        <tr>
+          <th>Class prefix</th>
+          <td><code>.col-xs-</code></td>
+          <td><code>.col-sm-</code></td>
+          <td><code>.col-md-</code></td>
+          <td><code>.col-lg-</code></td>
+        </tr>
+        <tr>
+          <th># of columns</th>
+          <td colspan="4">12</td>
+        </tr>
+        <tr>
+          <th>Column width</th>
+          <td class="text-muted">Auto</td>
+          <td>~62px</td>
+          <td>~81px</td>
+          <td>~97px</td>
+        </tr>
+        <tr>
+          <th>Gutter width</th>
+          <td colspan="4">30px (15px on each side of a column)</td>
+        </tr>
+        <tr>
+          <th>Nestable</th>
+          <td colspan="4">Yes</td>
+        </tr>
+        <tr>
+          <th>Offsets</th>
+          <td colspan="4">Yes</td>
+        </tr>
+        <tr>
+          <th>Column ordering</th>
+          <td colspan="4">Yes</td>
+        </tr>
+      </tbody>
+                </table>
+              </div>
+              <div id="Cau4" class="tabcontent">
+                <h3>Câu 4: Tìm và cho ví dụ về cách để thực hiện các yêu cầu sau:</h3>
+                <ul>
+                  <li>
+                    <p>Chèn 1 button 1 biểu tượng trong Button đó.</p>
+                    <a href="#" class="btn btn-info btn-lg">
+                      <i class="fas fa-search"></i> Search
+                    </a>
+                  </li>
+                  <li><p>Chèn 1 thanh Progress bar (tiến trình) tương tự trong CV ở Task 1.2</p>
+                  <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+</div>
+                  </li>
+                  <li>
+                    <p>Chèn các loại cảnh báo (Alert) trong trang như Succes, Info, Danger, Warning</p>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+                  </li>
+                  <li><p>Chèn 1 menu (Navigation) trong đó có 1 mục có menu con xổ xuống.</p>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Make by Kan LeeMin </p>
+    </div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks, ac;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  ac = document.getElementsByClassName(cityName);
+  for (i = 0; i < ac.length; i++) {
+    ac[i].className += " active";
+  }
+}
+openCity(event, 'Cau1');
+</script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

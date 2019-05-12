@@ -1,0 +1,91 @@
+.remove-padding{
+	padding: 0px;
+}
+.header .container{
+	background: #707F92;
+}
+.header .container .row{
+	padding-top: 10px;
+}
+.header .ul{
+	list-style-type: none;
+	padding: 0px;
+}
+.header .head1 p{
+	margin-top: 4px;
+}
+.header .head2 input{
+	border-radius: 2px;
+	border: 0px;
+	padding: 5px 10px;
+	width: 100%;
+}
+.header .head3{
+	margin-top: 4px;
+}
+.header .head3 ul li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+
+
+.tab {
+  border: 1px solid #ccc;
+  background-color: #F5F5F5;
+  padding: 0px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100%;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #A52B2A;
+  color: white;
+}
+.head3 .active{
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+#Cau2 ul li span{
+  color: #F684A8;
+}
+
+.code {
+    padding: 9px 0px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+}
+.main .main2 {
+  padding-right: 0px;
+}
+
+.footer p{
+	text-align: center;
+}
+
+@media (max-width: 576px){
+  
+}
